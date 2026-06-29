@@ -1,0 +1,2 @@
+vhdl work "washing_machine_controller.vhd"
+vhdl work "tb_washing_machine.vhd"

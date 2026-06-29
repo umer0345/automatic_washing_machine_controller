@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "C:/Users/spring2018/Desktop/DSD Project/washing_machine_controller/washing_machine_controller.xst" -ofn "C:/Users/spring2018/Desktop/DSD Project/washing_machine_controller/washing_machine_controller.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim washing_machine_controller.ngc washing_machine_controller_synthesis.v 
+vhdtdtfi -lib work washing_machine_controller.vhd -prj washing_machine_controller -o washing_machine_controller.spl -module washing_machine_controller -template C:/Xilinx/14.2/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e washing_machine_controller.spl {C:/Users/spring2018/Desktop/DSD Project/washing_machine_controller/washing_machine_controller.sym} 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "washing_machine_controller.ngc" washing_machine_controller.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o washing_machine_controller_map.ncd washing_machine_controller.ngd washing_machine_controller.pcf 
+par -w -intstyle ise -ol high -t 1 washing_machine_controller_map.ncd washing_machine_controller.ncd washing_machine_controller.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml washing_machine_controller.twx washing_machine_controller.ncd -o washing_machine_controller.twr washing_machine_controller.pcf 

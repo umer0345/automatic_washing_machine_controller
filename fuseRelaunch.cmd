@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/spring2018/Desktop/DSD Project/washing_machine_controller/tb_washing_machine_isim_beh.exe" -prj "C:/Users/spring2018/Desktop/DSD Project/washing_machine_controller/tb_washing_machine_beh.prj" "work.tb_washing_machine" 

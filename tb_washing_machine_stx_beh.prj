@@ -1,0 +1,2 @@
+vhdl isim_temp "washing_machine_controller.vhd"
+vhdl isim_temp "tb_washing_machine.vhd"
